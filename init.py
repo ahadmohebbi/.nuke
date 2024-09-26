@@ -1,7 +1,7 @@
 import nuke
-nuke.pluginAddPath('Python')
-nuke.pluginAddPath('Gizmos')
-nuke.pluginAddPath('Utilities/pixelfudger3')
-nuke.pluginAddPath("Utilities/stamps")
+def extend_plugin_path():
+    paths = ["Python","Gizmos","Utilities/pixelfudger3","Utilities/stamps"]
+    for path in paths:
+        nuke.pluginAddPath(path)
 
-
+extend_plugin_path()
